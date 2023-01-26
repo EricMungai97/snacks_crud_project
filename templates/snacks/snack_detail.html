@@ -1,0 +1,18 @@
+{% extends '_base.html' %}
+
+{% block content %}
+<div>
+<a href="#">
+    <h5 class="text-xl font-bold dark:text-white">{{ snack.title }}</h5>
+</a>
+    <a href="#" class="block max-w-sm p-6 bg-white border border-gray-200 rounded-lg shadow hover:bg-gray-100 dark:bg-gray-800 dark:border-gray-700 dark:hover:bg-gray-700">
+<p>Purchaser Email: {{ snack.purchaser }}</p>
+<p>Description: {{ snack.description }}</p>
+<div>
+    <a href="{% url 'snack_update' snack.pk %}">Update</a>
+    <a href="{% url 'snack_delete' snack.pk %}">Delete</a>
+    </div>
+    </a>
+</div>
+
+{% endblock %}
