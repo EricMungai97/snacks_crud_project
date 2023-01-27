@@ -1,0 +1,11 @@
+{% extends '_base.html' %}
+
+{% block content %}
+<h1 class="flex flex-col justify-center items-center ">Add a new Snack</h1>
+<div class="flex flex-col justify-center items-center">
+  <form method="POST">
+    {% csrf_token %}
+    {{ form.as_p }}
+   <input type="submit" value="Submit">
+    </div>
+{% endblock content %}
